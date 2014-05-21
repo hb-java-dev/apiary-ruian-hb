@@ -1,0 +1,22 @@
+FORMAT: 1A
+HOST: http://www.google.com
+
+# Ruian HB API
+Ruian HB API is a internal API for providing information from internal RUIAN database mirror.
+
+# Group Autocomplete
+Autocomplete resources of the Ruian HB API
+
+## Autocomplete City [/autocomplete/city{?term}]
+### Search cities started by term [GET]
++ Parameters
+    + term (required, string, `Pra`) ... City search term
+
++ Response 200 (application/json)
+
+        [{ 
+            "label": "Praha 5", "value": 1
+        }, {
+            "label": "Praha 1", "value": 2      
+        }]
+
