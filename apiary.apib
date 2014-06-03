@@ -15,18 +15,33 @@ Autocomplete resources of the Ruian HB API
 + Response 200 (application/json)
 
         [{ 
-            "label": "Praha 5", "value": 1
+            "label": "Praha", "value": 1
         }, {
-            "label": "Praha 1", "value": 2      
+            "label": "Prachatice", "value": 2      
         }]
 
 ## City Detail [/rest/city/{id}]
 ### Get city detail [GET]
 + Parameters
-    + id (required, string, `123`) ... City identification
+    + id (required, string, `1`) ... City identification
 
 + Response 200 (application/json)
 
         {
-            "name": "Praha 5"
+            "name": "Praha"
         }
+
+## City subquery [/rest/city/{id}/{type}{?term}]
+### Search objects related to city, like street, city part etc. [GET]
++ Parameters
+    + id (required, string, `1`) ... City identification
+    + type (required, string, `street`) ... Related item type
+    + term (optional, string, `Mak`) ... City search term
+
++ Response 200 (application/json)
+
+        [{
+            "type": "street", "name": "Makovská"
+        }, {
+            "type": "street", "name": "Makovského"
+        }]
