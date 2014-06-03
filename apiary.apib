@@ -36,12 +36,12 @@ Autocomplete resources of the Ruian HB API
 + Parameters
     + id (required, string, `1`) ... City identification
     + type (required, string, `street`) ... Related item type
-    + term (optional, string, `Mak`) ... City search term
+    + term (optional, string, `Mak`) ... Related item search term (if no specified, all related items would be returned)
 
 + Response 200 (application/json)
 
         [{
-            "type": "street", "name": "Makovská"
+            "type": "street", "label": "Makovská", "value": 22
         }, {
-            "type": "street", "name": "Makovského"
+            "type": "street", "label": "Makovského", "value": 112
         }]
